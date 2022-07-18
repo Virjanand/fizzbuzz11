@@ -20,6 +20,7 @@ public class FizzBuzzTest {
             "5, Buzz",
             "6, Fizz",
             "10, Buzz",
+            "15, FizzBuzz",
     })
     void replaceNumberWithFizzBuzzString(int number, String fizzBuzzString) {
         FizzBuzz fizzBuzz = new FizzBuzz();
