@@ -22,6 +22,6 @@ public class FizzBuzzMainIT {
             System.setOut(originalOutputStream);
         }
 
-        assertThat(bytes.toString()).contains("1\r\n2\nFizz\n4\nBuzz");
+        assertThat(bytes.toString()).contains("1\r\n2\r\nFizz\r\n4\r\nBuzz");
     }
 }
