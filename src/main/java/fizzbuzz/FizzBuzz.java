@@ -10,15 +10,16 @@ public class FizzBuzz {
     }
 
     private String toFizzBuzz(int number) {
-        if (number == 15) {
-            return "FizzBuzz";
-        }
+        String result = "";
         if (number % 3 == 0) {
-            return "Fizz";
+            result += "Fizz";
         }
         if (number % 5 == 0) {
-            return "Buzz";
+            result += "Buzz";
         }
-        return Integer.toString(number);
+        if (result.isEmpty()) {
+            return Integer.toString(number);
+        }
+        return result;
     }
 }
