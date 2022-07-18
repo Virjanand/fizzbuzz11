@@ -1,6 +1,8 @@
 package fizzbuzz;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,9 +14,12 @@ public class FizzBuzzTest {
         assertThat(fizzBuzz.fizzBuzzNumers()).hasSize(100);
     }
 
-    @Test
-    void replace3WithFizz() {
+    @ParameterizedTest(name = "{0} -> {1}")
+    @CsvSource({
+            "3, Fizz",
+    })
+    void replaceNumberWithFizzBuzzString(int number, String fizzBuzzString) {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        assertThat(fizzBuzz.fizzBuzzNumers().get(2)).isEqualTo("Fizz");
+        assertThat(fizzBuzz.fizzBuzzNumers().get(number - 1)).isEqualTo(fizzBuzzString);
     }
 }
