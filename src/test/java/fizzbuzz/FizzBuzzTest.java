@@ -17,6 +17,7 @@ public class FizzBuzzTest {
     @ParameterizedTest(name = "{0} -> {1}")
     @CsvSource({
             "3, Fizz",
+            "5, Buzz",
     })
     void replaceNumberWithFizzBuzzString(int number, String fizzBuzzString) {
         FizzBuzz fizzBuzz = new FizzBuzz();
