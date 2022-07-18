@@ -11,4 +11,10 @@ public class FizzBuzzTest {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertThat(fizzBuzz.fizzBuzzNumers()).hasSize(100);
     }
+
+    @Test
+    void replace3WithFizz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertThat(fizzBuzz.fizzBuzzNumers().get(2)).isEqualTo("Fizz");
+    }
 }
